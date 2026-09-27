@@ -1,0 +1,5 @@
+# data/sample_docs/research.txt
+Research notes:
+- Snapdragon X Elite is well suited for on-device local inference.
+- Privacy-first AI is a major user need.
+- All local memory systems need selective forgetting.

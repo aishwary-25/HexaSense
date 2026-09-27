@@ -1,0 +1,5 @@
+# data/sample_docs/notes.txt
+Project status:
+- Launch date is set for Q3, after user testing.
+- Client priorities: privacy, speed, and local AI.
+- Contact: alice@example.com should be informed before deployment.
