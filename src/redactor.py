@@ -1,12 +1,12 @@
 import re
 from typing import List, Tuple
 
-
 SENSITIVE_PATTERNS = [
     r"\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b",
     r"\b(?:\d[ -]?){13,16}\b",
     r"\b(?:sk_live_[A-Za-z0-9]+|ghp_[A-Za-z0-9]+|AKIA[0-9A-Z]{16})\b",
     r"\b(?:\d{1,3}\.){3}\d{1,3}\b",
+    r"\b(?:\+?1[ -]?)?(?:\(\d{3}\)|\d{3})[ -.]\d{3}[ -.]\d{4}\b",
 ]
 
 

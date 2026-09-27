@@ -1,6 +1,6 @@
 # tests/test_redactor.py
 
-from src.redactor import redact_pii, find_sensitive_segments
+from src.redactor import find_sensitive_segments, redact_pii
 
 
 def test_redact_pii_email():
@@ -20,3 +20,8 @@ def test_find_sensitive_segments_basic():
     text = "Use support@company.com and call 555-123-4567"
     findings = find_sensitive_segments(text)
     assert len(findings) >= 2
+
+
+def test_redact_pii_phone_number():
+    text = "Call 555-123-4567 before deployment."
+    assert "555-123-4567" not in redact_pii(text)

@@ -1,14 +1,18 @@
 # Python requirements for HexaSense
 
+# Install the repository as a package so app and src are importable from any entry point.
+-e .
+
 # Core app
 streamlit>=1.35.0
 fastapi>=0.110.0
 uvicorn>=0.29.0
 python-dotenv>=1.0.1
+python-multipart>=0.0.9
 
 # Document parsing
 PyMuPDF>=1.9.6
-python-docx>=1.5.0
+python-docx>=1.1.2
 pypandoc>=1.4.0
 
 # Embeddings and retrieval

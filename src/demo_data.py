@@ -1,10 +1,12 @@
 from pathlib import Path
 
+from .config import settings
 
-def seed_demo_docs():
+
+def seed_demo_docs(sample_dir: str = settings.sample_docs_dir):
     """Create a few sample documents for the hackathon demo."""
-    sample_dir = Path("data/sample_docs")
-    sample_dir.mkdir(parents=True, exist_ok=True)
+    sample_path = Path(sample_dir)
+    sample_path.mkdir(parents=True, exist_ok=True)
 
     sample_docs = {
         "notes.txt": """Project status:\n- Launch date is set for Q3, after user testing.\n- Client priorities: privacy, speed, and local AI.\n- Contact: alice@example.com should be informed before deployment.\n""",
@@ -13,6 +15,6 @@ def seed_demo_docs():
     }
 
     for name, text in sample_docs.items():
-        path = sample_dir / name
+        path = sample_path / name
         if not path.exists():
             path.write_text(text, encoding="utf-8")
